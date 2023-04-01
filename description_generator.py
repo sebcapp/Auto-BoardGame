@@ -166,7 +166,7 @@ class model_control:
       presence_penalty=pres,
       frequency_penalty=0.5
     )
-    return answer['choices'][0]['text']
+    return answer['choices'][0]['text']#.replace("\n", " ")
 
   def resp_cleanup(self,text):
 

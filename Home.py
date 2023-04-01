@@ -276,11 +276,66 @@ def application():
                 desc_placeholder.write(st.session_state.cur_pair[1])
 
 def demo():
+    """
+    Demo of Auto-BG
+    """
     st.text('This is demo, wow more changes')
+
+def blog():
+    """
+    Blog describing the Auto-BG project
+    """
+    with open("BGG Blog MD.md", 'r') as blog_md:
+        blog_text = blog_md.read() 
+    st.markdown(blog_text)
+
+def about_us():
+    """
+    About us page describing creators of Auto-BG
+    """
+    st.title("About Us")
+
+    # Columns containing information on each of the creators
+    col1, col2, col3 = st.columns([1,1,1])
+
+    with col1:
+        st.image('./NC.jfif', use_column_width=True)
+        st.subheader('Nick Canu')
+        st.write("""
+        **University of Michigan**\n
+        *MADS (Master of Applied Data Science)*\n
+        
+        If there was a Ph.D. in Board Game Studies, this person would be the first to graduate with honors. 
+
+        """)
+    
+    with col2:
+        st.image('./TD.jfif', use_column_width=True)
+        st.subheader('Taylor Druhot')
+        st.write("""
+        Master of Applied Data Science (MADS)\n
+        *University of Michigan*
+
+        If there's one person who knows how to make an app that's both user-friendly and addictive, it's this designer.
+
+        """)
+
+    with col3:
+        st.image('./SC.jfif', use_column_width=True)
+        st.subheader('Sebastian Capp')
+        st.write("""
+        Master of Applied Data Science (MADS)\n
+        *University of Michigan*
+
+        This writer's words are so powerful, they could probably convince a cat to take a bath.
+
+        """)
 
 page_names_to_funcs = {
     "Application": application,
-    "Demo": demo
+    "Demo": demo,
+    "Blog": blog,
+    "About Us": about_us,
 }
 
 demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
