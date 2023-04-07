@@ -23,7 +23,7 @@ def application():
     import io
     from spacy.tokens import DocBin
     from description_generator import input_manager, model_control
-    import  Model_Constants as mc
+    import Model_Constants as mc
 
     #non-ui helper functions
     def reader(url):
@@ -163,8 +163,7 @@ def application():
     with st.expander("How to use", expanded=True):
         st.write(
             """
-            Discover the concept for your next favorite game!
-            
+            Discover the concept for your next favorite game!\n
             Take your ideas and turn them into a full-fledged tabletop game concept through the power of deep learning!
             
             How do you use Auto-BG?
@@ -287,13 +286,16 @@ def blog():
     """
     with open("BGG Blog MD.md", 'r') as blog_md:
         blog_text = blog_md.read() 
-    st.markdown(blog_text)
+    st.markdown(blog_text, unsafe_allow_html=True)
 
 def about_us():
     """
     About us page describing creators of Auto-BG
     """
     st.title("About Us")
+    st.sidebar.subheader("Component 1")
+    st.sidebar.write('*Sidebar text*')
+
 
     # Columns containing information on each of the creators
     col1, col2, col3 = st.columns([1,1,1])

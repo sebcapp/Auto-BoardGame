@@ -1,11 +1,6 @@
-*Auto-BG: The Board Game Concept Generator*
+# Auto-BG: The Board Game Concept Generator
 
-1.  [Introduction]{.underline}
-
-    a.  [Goals Statement - design aid/improved user control over
-        > generation]{.underline}
-
-**A Gentle Introduction to Auto-BG & Board Game Data**
+## **A Gentle Introduction to Auto-BG & Board Game Data**
 
 **What is Auto-BG?**
 
@@ -30,30 +25,27 @@ through an extensive tag-prompt framework.
 Before digging into the process of generating a board game concept,
 let's ground some key terms:
 
--   *Mechanical* - The gameplay mechanics which, together, create a
-    > distinct ruleset for a given game. Represented here by a class of
-    > tags each capturing individual mechanics such as "Worker
-    > Placement" or "Set Collection".
+*Mechanical*: The gameplay mechanics which, together, create a
+distinct ruleset for a given game. Represented here by a class of 
+tags each capturing individual mechanics such as "Worker Placement"  or "Set Collection".
 
-    -   *Cooperative* - Our application, and the dataset, singles out
-        > this mechanic as being important enough to have its own tag
-        > class. As an alternative to the domain-default of
-        > *Competitive* gaming, *Cooperative* represents both an
-        > individual mechanic and an entire design paradigm shift.
+*Cooperative*: Our application, and the dataset, singles out
+this mechanic as being important enough to have its own tag
+class. As an alternative to the domain-default of
+*Competitive* gaming, *Cooperative* represents both an
+individual mechanic and an entire design paradigm shift.
 
--   *Descriptive* - In this context, the narrative, production, or
-    > family-connective elements of a game. This can include genre,
-    > categorical niches, or any relational tag not captured by the
-    > class of mechanical tags described above.
+*Descriptive*: In this context, the narrative, production, or
+family-connective elements of a game. This can include genre,
+categorical niches, or any relational tag not captured by the
+class of mechanical tags described above.
 
-    a.  [Orientation to the data - understanding how assembled tags
-        > define a game item]{.underline}
-
-**Understanding the Data**
+## Understanding the Data
+*Orientation to the data - understanding how assembled tags, define a game item*
 
 To train our models, we utilized a processed dataset of 20,769 ranked
 board games scraped from the board game database & forum
-[[BoardGameGeek.com]{.underline}](https://boardgamegeek.com/)^1^. Each
+[BoardGameGeek.com](https://boardgamegeek.com/)<sup>1</sup>. Each
 game includes its name, description, and 3,800 feature tags separated
 into five classes including Cooperative, Game Type, Category, Mechanic,
 and Family; when you select tags within Auto-BG, you choose and assign
