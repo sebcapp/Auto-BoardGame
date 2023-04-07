@@ -214,6 +214,9 @@ unknown game, and don't rely on post-design information like user
 recommendations or publisher data.
 
 *What happens when you choose tags in Auto-BG?*
+<div style="float: right">
+    <img src="./model_control_code_image.png" alt="Model Control Code image" width="200" height="200">
+</div>
 
 Inside Auto-BG, each tag has a hidden class prefix that denotes it as a
 member of that class and tracks its affiliation throughout the pipeline.
